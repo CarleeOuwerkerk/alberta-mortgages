@@ -9,6 +9,12 @@ const ApplySection = styled.div`
     @media only screen and (min-width: 768px) {
         display: flex;
     }
+    
+    @media only screen and (min-width: 992px) {
+        display: flex;
+        padding: 0 .5em;
+        padding: 0 4em;
+    }
 `
 
 const Rooftop = styled.div`

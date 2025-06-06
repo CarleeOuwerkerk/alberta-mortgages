@@ -3,24 +3,29 @@ import styled from "styled-components";
 import COLOUR_CONSTS from "../../COLOUR_CONSTS";
 
 export const Form = styled.form`
-    margin: 1em;
+    margin: 2em;
     border: thick double ${COLOUR_CONSTS.LIGHT_GREY};
     border-radius: 2px;
     padding: 1.5em;
 
-     @media only screen and (min-width: 768px) {
-        width: 50%;
-        border: none;
+     @media only screen and (min-width: 600px) {
         display: flex;
         flex-wrap: wrap;
         column-gap: 1em;
+    }
+
+     @media only screen and (min-width: 768px) {
+        width: 50%;
+        border: none;
+        align-items: flex-end;
+        padding: 0;
     }
 `
 
 export const FormItem = styled.div`
     margin: .5em 0;
 
-     @media only screen and (min-width: 768px) {
+     @media only screen and (min-width: 600px) {
         flex: 45%;
     }
 `
@@ -68,8 +73,13 @@ export const Button = styled.button`
         cursor: pointer;
     }
 
+    @media only screen and (min-width: 600px) {
+        width: 30%;
+        margin-left: auto;
+    }
+
     @media only screen and (min-width: 768px) {
         width: 30%;
-        // float: right;
+        margin-left: auto;
     }
 `
