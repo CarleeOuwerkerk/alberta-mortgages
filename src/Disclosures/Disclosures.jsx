@@ -1,13 +1,17 @@
 import styled from "styled-components"
 import COLOUR_CONSTS from "../COLOUR_CONSTS"
+import housesSketch from '../assets/housesSketchLightGrey.png'
 
 const DisclosuresWrapper = styled.div`
-    background-color: ${COLOUR_CONSTS.DARK_GREEN};
-    height: 5em;
-    display: flex;
-    align-items: center;
+    background-color: ${COLOUR_CONSTS.DARKEST_GREEN};
+    height: 8em;
     padding: 1em;
     color: ${COLOUR_CONSTS.LIGHT_GREY};
+
+    background-image: url(${housesSketch});
+    background-size: 10em;
+    background-repeat: repeat-x;
+    background-position: bottom;
 `
 
 const Disclosures = () => {

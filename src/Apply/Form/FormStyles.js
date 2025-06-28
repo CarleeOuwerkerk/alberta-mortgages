@@ -43,6 +43,7 @@ export const LabelText = styled.div`
 export const Input = styled.input`
     width: 98%;
     height: 2em;
+    border-radius: 2px;
 
     @media only screen and (min-width: 768px) {
         width: 99%;
@@ -52,6 +53,7 @@ export const Input = styled.input`
 export const CleaveInput = styled(Cleave)`
     width: 98%;
     height: 2em;
+    border-radius: 2px;
 
     @media only screen and (min-width: 768px) {
         width: 99%;
@@ -59,7 +61,8 @@ export const CleaveInput = styled(Cleave)`
 `
 
 export const Button = styled.button`
-    background-color: ${COLOUR_CONSTS.LIGHT_GREEN};
+    //OPTION 1
+    /* background-color: ${COLOUR_CONSTS.LIGHT_GREEN};
     color: ${COLOUR_CONSTS.DARK_GREEN};
     border-radius: .5em;
     padding: .75em 1.5em;
@@ -69,16 +72,46 @@ export const Button = styled.button`
 
     &:hover {
         background-color: ${COLOUR_CONSTS.AQUA};
-        color: ${COLOUR_CONSTS.DARK_GREEN};
         cursor: pointer;
     }
 
     @media only screen and (min-width: 600px) {
         width: 30%;
         margin-left: auto;
+    } */
+
+    //OPTION 3
+    background-color: ${COLOUR_CONSTS.LIGHT_GREY};
+    /* background-color: ${COLOUR_CONSTS.LIGHT_GREEN}; */
+    /* background-color: ${COLOUR_CONSTS.LIGHT_GREY}; */
+    border: 1px solid ${COLOUR_CONSTS.DARKEST_GREEN};
+    border-radius: 30px;
+    box-shadow: ${COLOUR_CONSTS.DARKEST_GREEN} 4px 4px 0 0;
+    color: ${COLOUR_CONSTS.DARKEST_GREEN};
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15.5px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    margin: 1em 0;
+
+    &:hover {
+        background-color: ${COLOUR_CONSTS.LIGHT_GREEN};
+        /* background-color: ${COLOUR_CONSTS.LIGHT_GREY}; */
+        /* background-color: ${COLOUR_CONSTS.WHITE}; */
     }
 
-    @media only screen and (min-width: 768px) {
+    &:active {
+        box-shadow: ${COLOUR_CONSTS.DARKEST_GREEN} 2px 2px 0 0;
+        transform: translate(2px, 2px);
+    }
+
+    @media only screen and (min-width: 600px) {
         width: 30%;
         margin-left: auto;
     }

@@ -86,7 +86,7 @@ const ApplicationForm = () => {
             </FormItem>
 
             <p>
-                Please note that you will be required to provide the following: 1. Proof of Title 2. Proof of Value (Appraisal or Tax Assessment) 3. Current Mortgage Balance
+                Please note that you will be required to provide the following: <br />1. Proof of Title 2. Proof of Value (Appraisal or Tax Assessment) 3. Current Mortgage Balance
             </p>
 
             <FormItem>
