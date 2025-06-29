@@ -12,11 +12,11 @@ const TopBarContainer = styled.div`
     color: ${COLOUR_CONSTS.LIGHT_GREY};
     padding: 0 1.5em 0 .75em;
 
-    transform: ${({ visible }) => (visible ? 'translateY(0)' : 'translateY(-100%)')};
-    transition: transform 0.3s ease-in-out;
+    /* transform: ${({ visible }) => (visible ? 'translateY(0)' : 'translateY(-100%)')};
+    transition: transform 0.3s ease-in-out; */
     z-index: 1000;
     /* position: ${({ isScrolledToPageTop }) => (isScrolledToPageTop ? 'relative' : 'fixed')}; */
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     right: 0;
@@ -152,7 +152,7 @@ const TopBar = () => {
                     <Bar isMenuOpen={isMenuOpen} />
                 </Menu>
             </TopBarContainer>
-            <Test />
+            {/* <Test /> */}
         </>
     )
 }

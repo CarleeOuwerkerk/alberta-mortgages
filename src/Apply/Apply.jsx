@@ -28,6 +28,10 @@ const ApplyPhoto = styled.div`
     height: 28em;
     overflow: visible;
 
+     @media only screen and (min-width: 768px) {
+        background-position-y: 60%;
+    }
+
     &::after {
         content: '';
         position: absolute;
@@ -37,6 +41,7 @@ const ApplyPhoto = styled.div`
         height: 5em;
         background-color: ${COLOUR_CONSTS.GREEN};
         clip-path: polygon(50% 0, 0 100%, 100% 100%);
+        margin-bottom: -.1%;
     }
 `
 
