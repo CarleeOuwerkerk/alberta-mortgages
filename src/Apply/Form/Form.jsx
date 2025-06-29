@@ -36,6 +36,7 @@ const ApplicationForm = () => {
     if (!isFormSubmitted) {
         return (
             <Form ref={form} onSubmit={handleSubmit}>
+
                 <FormItem>
                     <InputLabel>
                         <LabelText>
@@ -71,10 +72,10 @@ const ApplicationForm = () => {
                         <LabelText>
                             PHONE NUMBER
                         </LabelText>
-
                         <CleaveInput
                             name='phoneNumber'
                             required
+                            pattern="\(\d{3}\) \d{3}-\d{4}"
                             value={inputs.phoneNumber || ''}
                             onChange={handleChange}
                             title='Enter a valid phone number (in the form (xxx) xxx-xxxx).'
@@ -93,7 +94,6 @@ const ApplicationForm = () => {
                         <LabelText>
                             EMAIL
                         </LabelText>
-
                         <Input
                             type='email'
                             required
@@ -112,10 +112,10 @@ const ApplicationForm = () => {
                         <LabelText>
                             PROPERTY VALUE
                         </LabelText>
-
                         <CleaveInput
                             name='propertyValue'
                             required
+                            pattern="^\$\d{1,3}(,\d{3})*(\.\d{0,2})?$|^\$\d+(\.\d{0,2})?$"
                             value={inputs.propertyValue || ''}
                             onChange={handleChange}
                             title='Enter your property value.'
@@ -138,6 +138,7 @@ const ApplicationForm = () => {
                         <CleaveInput
                             name='mortgageBalance'
                             required
+                            pattern="^\$\d{1,3}(,\d{3})*(\.\d{0,2})?$|^\$\d+(\.\d{0,2})?$"
                             value={inputs.mortgageBalance || ''}
                             onChange={handleChange}
                             title='Enter your mortgage balance.'
