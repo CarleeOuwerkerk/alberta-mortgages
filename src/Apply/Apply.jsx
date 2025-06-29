@@ -41,7 +41,7 @@ const ApplyPhoto = styled.div`
         height: 5em;
         background-color: ${COLOUR_CONSTS.GREEN};
         clip-path: polygon(50% 0, 0 100%, 100% 100%);
-        margin-bottom: -.1%;
+        margin-bottom: -.15%;
     }
 `
 

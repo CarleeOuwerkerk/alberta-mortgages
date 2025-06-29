@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
 import COLOUR_CONSTS from '../COLOUR_CONSTS';
-import { useEffect, useState, useRef } from 'react';
+import { useRef, useState } from 'react';
 import logo from '../assets/Logo.png'
 import { Link } from 'react-router';
+import Menu from './Menu/Menu';
 
 const TopBarContainer = styled.div`
     display: flex;
@@ -11,12 +12,7 @@ const TopBarContainer = styled.div`
     background-color: ${COLOUR_CONSTS.DARK_GREEN};
     color: ${COLOUR_CONSTS.LIGHT_GREY};
     padding: 0 1.5em 0 .75em;
-
-    /* transform: ${({ visible }) => (visible ? 'translateY(0)' : 'translateY(-100%)')};
-    transition: transform 0.3s ease-in-out; */
     z-index: 1000;
-    /* position: ${({ isScrolledToPageTop }) => (isScrolledToPageTop ? 'relative' : 'fixed')}; */
-    /* position: fixed; */
     top: 0;
     left: 0;
     right: 0;
@@ -36,7 +32,6 @@ const TopBarLinks = styled.div`
         margin-left: 1em;
         display: flex;
         justify-content: space-between;
-        /* font-weight: 600; */
         font-size: 18px;
 
         a {
@@ -58,11 +53,7 @@ const TopBarLinks = styled.div`
     }
 `
 
-const Test = styled.div`
-    height: 6em;
-`
-
-const Menu = styled.div`
+const MenuIcon = styled.div`
     display: inline-block;
     cursor: pointer;
     right: 0;
@@ -95,65 +86,29 @@ const Bar = styled.div`
 `
 
 const TopBar = () => {
-    const [menuVisible, setMenuVisible] = useState(true);
-    const [hasScrolledPastMenu, setHasScrolledPastMenu] = useState(false);
     const isScrolledToPageTop = window.scrollY === 0;
-    const lastScrollYRef = useRef(0);
-    const lastTimeRef = useRef(Date.now());
-    const topBarRef = useRef(null);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentY = window.scrollY;
-            const now = Date.now();
-            const deltaY = lastScrollYRef.current - currentY;
-            const deltaTime = now - lastTimeRef.current;
-
-            const speed = deltaY / deltaTime;
-
-            if (currentY > 80 && !hasScrolledPastMenu) {
-                setHasScrolledPastMenu(true);
-            }
-
-            if (!hasScrolledPastMenu || currentY <= 0) {
-                setMenuVisible(true);
-            } else {
-                if (deltaY > 0 && speed > 0.3) {
-                    setMenuVisible(true);  // scrolling up fast
-                } else if (deltaY < 0) {
-                    setMenuVisible(false); // scrolling down
-                }
-            }
-
-            lastScrollYRef.current = currentY;
-            lastTimeRef.current = now;
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [hasScrolledPastMenu]);
+    const menuIconRef = useRef(null);
 
     return (
-        <>
-            <TopBarContainer ref={topBarRef} visible={menuVisible} isScrolledToPageTop={isScrolledToPageTop}>
-                <Link to='/' end>
-                    <img src={logo} alt="Alberta Mortgage Loans Logo" width="200" />
-                </Link>
+        <TopBarContainer isScrolledToPageTop={isScrolledToPageTop}>
+            <Link to='/' end>
+                <img src={logo} alt="Alberta Mortgage Loans Logo" width="200" />
+            </Link>
 
-                <TopBarLinks>
-                    <Link to='/FAQs' end>FAQs</Link>
-                    <Link to='/apply' end>Apply</Link>
-                </TopBarLinks>
+            <TopBarLinks>
+                <Link to='/FAQs' end>FAQs</Link>
+                <Link to='/apply' end>Apply</Link>
+            </TopBarLinks>
 
-                <Menu onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                    <Bar isMenuOpen={isMenuOpen} />
-                    <Bar isMenuOpen={isMenuOpen} />
-                    <Bar isMenuOpen={isMenuOpen} />
-                </Menu>
-            </TopBarContainer>
-            {/* <Test /> */}
-        </>
+            <MenuIcon onClick={() => setIsMenuOpen(!isMenuOpen)} ref={menuIconRef}>
+                <Bar isMenuOpen={isMenuOpen} />
+                <Bar isMenuOpen={isMenuOpen} />
+                <Bar isMenuOpen={isMenuOpen} />
+            </MenuIcon>
+
+            {isMenuOpen && <Menu setIsMenuOpen={setIsMenuOpen} menuIconRef={menuIconRef} />}
+        </TopBarContainer>
     )
 }
 
