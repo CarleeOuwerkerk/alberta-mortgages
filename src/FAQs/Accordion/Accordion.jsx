@@ -1,5 +1,16 @@
 import { useState } from "react";
 import styled from "styled-components";
+import COLOUR_CONSTS from '../../COLOUR_CONSTS';
+
+const AccordionContainer = styled.div`
+     @media only screen and (min-width: 600px) {
+        width: 55%;
+    }
+
+     @media only screen and (min-width: 768px) {
+        width: 45%;
+    }
+`
 
 const DropdownItem = styled.div`
     border-top: 1px solid black;
@@ -9,27 +20,30 @@ const DropdownItem = styled.div`
   }
 `
 
-const Question = styled.div`
+const DropdownTrigger = styled.div`
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     &:hover {
-        color: #007b5e;
+        color: ${COLOUR_CONSTS.GREEN};
     }
 `;
 
-const Answer = styled.div`
-    max-height: ${({ isOpen }) => (isOpen ? '200px' : '0')};
-    overflow: hidden;
-    /* transition: max-height 0.3s ease; */
-    padding-top: ${({ isOpen }) => (isOpen ? '1em' : '0')};
+const Question = styled.h2`
+    text-transform: uppercase;
+    font-size: 20px;
 `;
 
 const DropdownIcon = styled.span`
-    font-size: 1.5em;
-    line-height: 1;
-    margin-left: 1em;
-    transition: all 0.2s ease;
+    font-size: 30px;
 `;
+
+const Answer = styled.div`
+        margin-top: .5em;
+        margin-bottom: 2em;
+    `;
 
 const Accordion = ({ data }) => {
     const [openIndex, setOpenIndex] = useState(null);
@@ -39,19 +53,22 @@ const Accordion = ({ data }) => {
     };
 
     return (
-        <div>
+        <AccordionContainer>
             {data.map((item, index) => (
                 <DropdownItem key={index}>
-                    <Question onClick={() => toggleIndex(index)}>
-                        {item.question}
+                    <DropdownTrigger onClick={() => toggleIndex(index)}>
+                        <Question>
+                            {item.question}
+                        </Question>
                         <DropdownIcon isOpen={openIndex === index}>
-                            {openIndex === index ? '−' : '+'}
+                            {openIndex === index ? '-' : '+'}
                         </DropdownIcon>
-                    </Question>
-                    <Answer isOpen={openIndex === index}>{item.answer}</Answer>
+                    </DropdownTrigger>
+                    {openIndex === index && <Answer>{item.answer}</Answer>}
                 </DropdownItem>
-            ))}
-        </div>
+            ))
+            }
+        </AccordionContainer >
     )
 }
 

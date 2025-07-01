@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
-import { Button, CleaveInput, Form, FormItem, Input, InputLabel, LabelText } from "./FormStyles";
+import { Button, CleaveInput, Form, FormItem, Input, InputLabel, LabelText, FormConfirmation } from "./FormStyles";
 
 const ApplicationForm = () => {
     const [inputs, setInputs] = useState({});
@@ -158,9 +158,14 @@ const ApplicationForm = () => {
     }
 
     else return (
-        <div>
-            Thank you for submitting your information! We will review everything shortly.
-        </div>
+        <FormConfirmation>
+            <p>
+                Thank you for submitting the form!
+            </p>
+            <p>
+                We will review your information shortly.
+            </p>
+        </FormConfirmation>
     )
 }
 

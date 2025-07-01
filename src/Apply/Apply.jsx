@@ -11,11 +11,11 @@ const ApplySection = styled.div`
 
     @media only screen and (min-width: 768px) {
         display: flex;
-        padding: 0 .5em;
+        padding: 0 .5em 2em .5em;
     }
     
     @media only screen and (min-width: 992px) {
-        padding: 0 4em;
+        padding: 0 4em 2em 4em;
     }
 `
 

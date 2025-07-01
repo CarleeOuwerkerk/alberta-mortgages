@@ -116,3 +116,19 @@ export const Button = styled.button`
         margin-left: auto;
     }
 `
+
+export const FormConfirmation = styled.div`
+    text-align: center; 
+    font-weight: 600;
+    margin: 2em;
+    border: thick double ${COLOUR_CONSTS.LIGHT_GREY};
+    border-radius: 2px;
+    padding: 1.5em;
+    
+    @media only screen and (min-width: 768px) {
+        width: 50%;
+        border: none;
+        padding: 0;
+        font-size: 18px;
+    }
+`
