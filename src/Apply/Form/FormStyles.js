@@ -24,9 +24,10 @@ export const Form = styled.form`
 
 export const FormItem = styled.div`
     margin: .5em 0;
-
-     @media only screen and (min-width: 600px) {
-        flex: 45%;
+    display: ${props => props.disabled ? "none" : null};
+    
+    @media only screen and (min-width: 600px) {
+        flex: ${props => props.isWideField ? '100%' : '45%'};
     }
 `
 
@@ -44,9 +45,25 @@ export const Input = styled.input`
     width: 98%;
     height: 2em;
     border-radius: 2px;
+    display: ${props => props.disabled ? "none" : null};  
+
+    @media only screen and (min-width: 600px) {
+        width: ${props => props.isWideField ? '99%' : '98%'};
+    }
 
     @media only screen and (min-width: 768px) {
-        width: 99%;
+        width: ${props => props.isWideField ? '99.5%' : '99%'};
+    }
+`
+
+export const Select = styled.select`
+    width: 100%;
+    height: 2.4em;
+    border-radius: 2px;
+    box-shadow: -.3px -.5px .5px black;
+
+     @media only screen and (min-width: 768px) {
+       width: 101.5%;
     }
 `
 

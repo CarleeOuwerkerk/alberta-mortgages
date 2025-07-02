@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import COLOUR_CONSTS from '../COLOUR_CONSTS';
 import { useRef, useState } from 'react';
-import logo from '../assets/Logo.png'
+import logo from '../assets/MobileLogo.png'
 import { Link } from 'react-router';
 import Menu from './Menu/Menu';
 
@@ -93,7 +93,7 @@ const TopBar = () => {
     return (
         <TopBarContainer isScrolledToPageTop={isScrolledToPageTop}>
             <Link to='/' end>
-                <img src={logo} alt="Alberta Mortgage Loans Logo" width="200" />
+                <img src={logo} alt="Alberta Mortgage Solutions Logo" width="215" />
             </Link>
 
             <TopBarLinks>

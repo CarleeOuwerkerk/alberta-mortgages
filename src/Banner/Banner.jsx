@@ -7,19 +7,10 @@ import stockHouse1 from '../assets/stockHouse1.jpg'
 const OverviewSection = styled.div`
     position: relative;
     width: 100%;
-    height: 35em;  //ensure it matches or contains HouseImage height
+    height: 25em;  //ensure it matches or contains HouseImage height
     overflow: hidden;
     display: flex;
     justify-content: center;
-
-     @media only screen and (min-width: 768px) {
-        height: 25em;
-        /* height: 45em; */
-    }
-    
-    @media only screen and (min-width: 992px) {
-
-    }
  `
 
 const HouseImage = styled.div`
@@ -54,11 +45,11 @@ const Slogan = styled.h2`
     text-align: center;
     font-weight: 600;
     z-index: 2;
-    font-size: 45px;
+    font-size: 40px;
     padding: 0 .5em;
 
     @media only screen and (min-width: 768px) {
-        font-size: 50px;
+        font-size: 46px;
         padding: .25em .5em;
     }
 `

@@ -22,11 +22,7 @@ const Specifics = () => {
             </ul>
 
             <p>
-                We offer mortgage loans up to 70% LTV (Loan - To - Value) of property with no application fees. We do not offer personal loans.
-            </p>
-
-            <p>
-                Send an email today to landexperts@shaw.ca for a free quote.
+                We offer mortgage loans up to 70% LTV (Loan To Value) of property. We do not offer personal loans.
             </p>
         </SpecificsSection>
     )

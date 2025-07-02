@@ -34,7 +34,7 @@ const Overview = () => {
                 </h2>
 
                 <p>
-                    We are Alberta's premier private lender with more than 25 years of experience. With our expertise and quick turnaround, we'll help you navigate the loan process. Fast approvals and quick closing are available.
+                    We are Alberta's premier private lender with more than 25 years of experience. With our expertise and quick turnaround, we'll help you navigate the loan process. Fast approvals and quick closings are available.
                 </p>
 
                 <p>

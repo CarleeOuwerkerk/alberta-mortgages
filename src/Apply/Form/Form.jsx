@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
-import { Button, CleaveInput, Form, FormItem, Input, InputLabel, LabelText, FormConfirmation } from "./FormStyles";
+import { Button, CleaveInput, Form, FormItem, Input, InputLabel, LabelText, FormConfirmation, Select } from "./FormStyles";
 
 const ApplicationForm = () => {
     const [inputs, setInputs] = useState({});
@@ -132,7 +132,43 @@ const ApplicationForm = () => {
                 <FormItem>
                     <InputLabel>
                         <LabelText>
-                            MORTGAGE BALANCE
+                            PROPERTY TYPE
+                        </LabelText>
+
+                        <Select name="propertyType" value={inputs.propertyType || ''} onChange={handleChange} required>
+                            <option style={{ display: 'none' }}></option>
+                            <option value="single-family home">Single-Family Home</option>
+                            <option value="condo">Condo</option>
+                            <option value="townhouse">Townhouse</option>
+                            <option value="duplex">Duplex</option>
+                            <option value="other">Other</option>
+                        </Select>
+
+                    </InputLabel>
+                </FormItem>
+
+                <FormItem hidden={inputs.propertyType !== "other"} isWideField={true}>
+                    <InputLabel>
+                        <LabelText>
+                            OTHER PROPERTY TYPE
+                        </LabelText>
+
+                        <Input
+                            type='text'
+                            name='otherPropertyType'
+                            required={inputs.propertyType === "other"}
+                            disabled={inputs.propertyType !== "other"}
+                            isWideField={inputs.propertyType === "other"}
+                            value={inputs.otherPropertyType || ''}
+                            onChange={handleChange}
+                            title='Please specify your other property type.' />
+                    </InputLabel>
+                </FormItem>
+
+                <FormItem>
+                    <InputLabel>
+                        <LabelText>
+                            CURRENT MORTGAGE BALANCE
                         </LabelText>
 
                         <CleaveInput
@@ -142,6 +178,29 @@ const ApplicationForm = () => {
                             value={inputs.mortgageBalance || ''}
                             onChange={handleChange}
                             title='Enter your mortgage balance.'
+                            options={{
+                                numeral: true,
+                                numeralThousandsGroupStyle: 'thousand',
+                                prefix: '$',
+                                rawValueTrimPrefix: true,
+                            }}
+                        />
+                    </InputLabel>
+                </FormItem>
+
+                <FormItem>
+                    <InputLabel>
+                        <LabelText>
+                            REQUESTED LOAN AMOUNT
+                        </LabelText>
+
+                        <CleaveInput
+                            name='requestedLoanAmount'
+                            required
+                            pattern="^\$\d{1,3}(,\d{3})*(\.\d{0,2})?$|^\$\d+(\.\d{0,2})?$"
+                            value={inputs.requestedLoanAmount || ''}
+                            onChange={handleChange}
+                            title='Enter your requested loan amount.'
                             options={{
                                 numeral: true,
                                 numeralThousandsGroupStyle: 'thousand',
@@ -163,7 +222,7 @@ const ApplicationForm = () => {
                 Thank you for submitting the form!
             </p>
             <p>
-                We will review your information shortly.
+                We will review your information and respond within 48 hours.
             </p>
         </FormConfirmation>
     )
