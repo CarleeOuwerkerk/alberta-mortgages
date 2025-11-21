@@ -14,6 +14,7 @@ import FAQs from './FAQs/FAQs';
 const PageWrapper = styled.div`
     background-color: ${COLOUR_CONSTS.LIGHT_GREY};
     font-family: "Belleza", sans-serif;
+    font-size: 18px;
 `
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

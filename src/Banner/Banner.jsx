@@ -57,7 +57,7 @@ const OverviewSection = styled.div`
     background-repeat: no-repeat;
     left: 0;
     right: 0;
-    height: 35em;
+    height: 31em;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
@@ -75,7 +75,6 @@ const BulletedList = styled.ul`
     color: ${COLOUR_CONSTS.LIGHT_GREY};
     line-height: 26px;
     margin: 0 0 2em .5em;
-    font-size: 18px;
 `
 
 const Banner = () => {

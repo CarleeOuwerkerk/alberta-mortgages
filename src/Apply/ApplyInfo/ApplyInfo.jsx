@@ -19,7 +19,7 @@ const ApplyInfo = () => {
 
             <h3>Questions?</h3>
 
-            <p>Check out our FAQ page or reach out by email at landexperts@shaw.ca.</p>
+            <p>Check out our FAQ page. If that doesn't answer your question, reach out at landexperts@shaw.ca.</p>
         </ApplyInfoWrapper>
     )
 }

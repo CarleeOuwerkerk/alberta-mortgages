@@ -146,6 +146,5 @@ export const FormConfirmation = styled.div`
         width: 50%;
         border: none;
         padding: 0;
-        font-size: 18px;
     }
 `

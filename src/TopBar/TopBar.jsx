@@ -32,7 +32,6 @@ const TopBarLinks = styled.div`
         margin-left: 1em;
         display: flex;
         justify-content: space-between;
-        font-size: 18px;
 
         a {
             color: ${COLOUR_CONSTS.LIGHT_GREY};

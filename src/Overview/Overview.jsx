@@ -1,13 +1,10 @@
 import styled from "styled-components";
 import COLOUR_CONSTS from "../COLOUR_CONSTS";
-import calgary from '../assets/calgary.jpg';
 
 const OverviewContainer = styled.div`
     padding: .5em 0;
     background-color: #5a5c72;
     color: ${COLOUR_CONSTS.LIGHT_GREY};
-    // background-color: #acbd29;
-    // background-color: #8a9f1c;
     
     @media only screen and (min-width: 768px) {
         display: flex;
@@ -18,11 +15,12 @@ const OverviewText = styled.div`
     padding: .5em 2em;
 `
 
-const OverviewImage = styled.img`
-    width: 33%;
-    margin: 2em 0;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+const OverviewImage = styled.div`
+    background-image: url('https://static.vecteezy.com/system/resources/previews/058/208/854/non_2x/aerial-view-of-a-luxurious-lakeside-mansion-surrounded-by-vibrant-autumn-trees-and-a-tranquil-blue-lake-capturing-nature-s-beauty-photo.jpg');
+    /* background-size: cover; */
+    background-position-x: 25%;
+    background-repeat: no-repeat;
+    height: 20em;
 `
 
 const Overview = () => {
@@ -41,7 +39,8 @@ const Overview = () => {
                     Funds are available now!
                 </p >
             </OverviewText>
-            <OverviewImage src={calgary} alt='dowtown' />
+
+            <OverviewImage />
         </OverviewContainer>
     )
 }
