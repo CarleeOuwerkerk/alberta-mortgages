@@ -6,7 +6,7 @@ export const Form = styled.form`
     margin: 2em;
     border: thick double ${COLOUR_CONSTS.LIGHT_GREY};
     border-radius: 2px;
-    padding: 1.5em;
+    padding: 1.25em;
 
      @media only screen and (min-width: 600px) {
         display: flex;

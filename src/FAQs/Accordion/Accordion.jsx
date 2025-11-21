@@ -43,6 +43,7 @@ const DropdownIcon = styled.span`
 const Answer = styled.div`
         margin-top: .5em;
         margin-bottom: 2em;
+        white-space: pre-line;
     `;
 
 const Accordion = ({ data }) => {

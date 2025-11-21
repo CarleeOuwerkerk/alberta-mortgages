@@ -11,7 +11,7 @@ const ApplySection = styled.div`
 
     @media only screen and (min-width: 768px) {
         display: flex;
-        padding: 0 .5em 2em .5em;
+        padding: 0 .25em 2em .25em;
     }
     
     @media only screen and (min-width: 992px) {
