@@ -52,17 +52,16 @@ const Specifics = () => {
             <SpecificsContent>
                 <h2>Let us help you with</h2>
                 <ul>
-                    <li>first and second mortgages</li>
-                    <li>divorce settlements</li>
-                    <li>debt consolidation</li>
-                    <li>new home construction</li>
-                    <li>renovations</li>
-                    <li>bridge financing</li>
+                    <li>First and Second Mortgages</li>
+                    <li>Divorce Settlements</li>
+                    <li>Debt Consolidation</li>
+                    <li>New Home Construction</li>
+                    <li>Renovations</li>
+                    <li>Bridge Financing</li>
                 </ul>
 
-                <p>
-                    We offer mortgage loans up to 70% LTV (Loan To Value) of property. We do not offer personal loans.
-                </p>
+                <p>We offer mortgage loans up to 70% LTV (Loan To Value) of property.</p>
+                <p>We do not offer personal loans.</p>
             </SpecificsContent>
         </SpecificsSection>
     )
