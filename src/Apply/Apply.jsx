@@ -41,20 +41,16 @@ const ApplyPhoto = styled.div`
         height: 5em;
         background-color: ${COLOUR_CONSTS.GREEN};
         clip-path: polygon(50% 0, 0 100%, 100% 100%);
-        margin-bottom: -.15%;
+        transform: translateY(1px);
     }
 `
 
 const Rooftop = styled.div`
-    margin-bottom: -.1%;
     width: 100%;
     height: 5em;
     background-color: ${COLOUR_CONSTS.GREEN};
     clip-path: polygon(50% 0, 0 100%, 100% 100%);
-
-    @media only screen and (min-width: 768px) {
-        margin-bottom: -.1%;
-    }
+    transform: translateY(1px);
 `
 
 const Apply = () => {
