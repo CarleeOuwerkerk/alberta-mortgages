@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import COLOUR_CONSTS from '../COLOUR_CONSTS';
 import { useRef, useState } from 'react';
-import logo from '../assets/MobileLogo.png'
+import logo from '../assets/AMSLogo.png'
 import { Link } from 'react-router';
 import Menu from './Menu/Menu';
 
@@ -11,7 +11,7 @@ const TopBarContainer = styled.div`
     justify-content: space-between;
     background-color: ${COLOUR_CONSTS.DARK_GREEN};
     color: ${COLOUR_CONSTS.LIGHT_GREY};
-    padding: 0 1.5em 0 .75em;
+    padding: 0 1.5em 0 1.5em;
     z-index: 1000;
     top: 0;
     left: 0;
@@ -20,6 +20,12 @@ const TopBarContainer = styled.div`
     @media only screen and (min-width: 768px) {
         justify-content: flex-start;
     }
+`
+
+const LogoHomeLink = styled(Link)`
+    display: flex;
+    align-items: center;
+    height: 5.5em;
 `
 
 const TopBarLinks = styled.div`
@@ -91,9 +97,9 @@ const TopBar = () => {
 
     return (
         <TopBarContainer isScrolledToPageTop={isScrolledToPageTop}>
-            <Link to='/' end>
+            <LogoHomeLink to='/' end>
                 <img src={logo} alt="Alberta Mortgage Solutions Logo" width="215" />
-            </Link>
+            </LogoHomeLink>
 
             <TopBarLinks>
                 <Link to='/FAQs' end>FAQs</Link>

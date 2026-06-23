@@ -5,7 +5,7 @@ import COLOUR_CONSTS from "../../COLOUR_CONSTS";
 
 const MenuContainer = styled.div`
     position: fixed;
-    top: 100px;
+    top: 5.5em;
     width: 18em;
     right: 0;
     height: 100%;
