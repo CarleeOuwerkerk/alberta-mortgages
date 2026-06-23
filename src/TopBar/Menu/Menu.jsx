@@ -30,10 +30,7 @@ const MenuItem = styled(Link)`
     &:focus {
         color: ${COLOUR_CONSTS.LIGHT_GREY};
         text-decoration: none;
-
-        &:hover {
-            font-weight: 600;
-        }
+        font-weight: 600;
     }
 `
 

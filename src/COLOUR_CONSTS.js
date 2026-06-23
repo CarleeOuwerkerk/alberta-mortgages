@@ -1,12 +1,13 @@
 const COLOUR_CONSTS = {
-    DARKEST_GREEN: 'rgb(12, 40, 25)',  //rgb(12, 40, 25)
-    DARK_GREEN: 'rgb(20, 67, 42)',  // rgb(20, 67, 42)
-    // DARK_GREEN: '#064717',  // #064717
-    LIGHT_GREEN: '#69F5A1', // #69F5A1
-    GREEN: '#1F9150',       // #1F9150
-    AQUA: '#0AAB93',        // #0AAB93
-    LIGHT_GREY: '#DAE1EA',   // #DAE1EA
-    WHITE: 'rgb(255, 255, 255)'   //rgb(255, 255, 255)
+    DARKEST_GREEN: 'rgb(12, 40, 25)',   // rgb(12, 40, 25)
+    DARK_GREEN: 'rgb(20, 67, 42)',      // rgb(20, 67, 42)
+    // DARK_GREEN: '#064717',           // #064717
+    LIGHT_GREEN: '#69F5A1',             // #69F5A1
+    GREEN: '#1F9150',                   // #1F9150
+    AQUA: '#0AAB93',                    // #0AAB93
+    LIGHT_GREY: '#DAE1EA',              // #DAE1EA
+    WHITE: 'rgb(255, 255, 255)',        // rgb(255, 255, 255)
+    BLACK: 'rgb(0, 0, 0)',              // rgb(0, 0, 0)
 }
 //rgb(6, 62, 20)
 
