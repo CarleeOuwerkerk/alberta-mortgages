@@ -78,36 +78,14 @@ export const CleaveInput = styled(Cleave)`
 `
 
 export const Button = styled.button`
-    //OPTION 1
-    /* background-color: ${COLOUR_CONSTS.LIGHT_GREEN};
-    color: ${COLOUR_CONSTS.DARK_GREEN};
-    border-radius: .5em;
-    padding: .75em 1.5em;
-    font-weight: bold;
-    width: 100%;
-    margin: 1em 0;
-
-    &:hover {
-        background-color: ${COLOUR_CONSTS.AQUA};
-        cursor: pointer;
-    }
-
-    @media only screen and (min-width: 600px) {
-        width: 30%;
-        margin-left: auto;
-    } */
-
-    //OPTION 3
     background-color: ${COLOUR_CONSTS.LIGHT_GREY};
-    /* background-color: ${COLOUR_CONSTS.LIGHT_GREEN}; */
-    /* background-color: ${COLOUR_CONSTS.LIGHT_GREY}; */
     border: 1px solid ${COLOUR_CONSTS.DARKEST_GREEN};
     border-radius: 30px;
     box-shadow: ${COLOUR_CONSTS.DARKEST_GREEN} 4px 4px 0 0;
     color: ${COLOUR_CONSTS.DARKEST_GREEN};
     cursor: pointer;
-    font-weight: 600;
-    font-size: 15.5px;
+    font-weight: bold;
+    font-size: 16px;
     line-height: 50px;
     text-align: center;
     text-decoration: none;
@@ -119,8 +97,6 @@ export const Button = styled.button`
 
     &:hover {
         background-color: ${COLOUR_CONSTS.LIGHT_GREEN};
-        /* background-color: ${COLOUR_CONSTS.LIGHT_GREY}; */
-        /* background-color: ${COLOUR_CONSTS.WHITE}; */
     }
 
     &:active {
