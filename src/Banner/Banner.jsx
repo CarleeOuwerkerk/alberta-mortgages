@@ -24,7 +24,7 @@ const OverviewSection = styled.div`
     background-repeat: no-repeat;
     left: 0;
     right: 0;
-    height: 32em;
+    height: 36em;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
