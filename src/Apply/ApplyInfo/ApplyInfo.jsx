@@ -25,6 +25,21 @@ const PageLink = styled(Link)`
     }
 `
 
+const EmailLink = styled.a`
+    color: ${COLOUR_CONSTS.BLACK};
+    cursor: pointer;
+    text-decoration: none;
+    font-style: italic;
+
+    &:hover,
+    &:active,
+    &:visited,
+    &:focus {
+        color: ${COLOUR_CONSTS.BLACK};
+        text-decoration: underline;
+    }
+`
+
 const ApplyInfo = () => {
     return (
         <ApplyInfoWrapper>
@@ -36,7 +51,12 @@ const ApplyInfo = () => {
 
             <h3>Questions?</h3>
 
-            <p>Check out our <PageLink to='/FAQs' end>FAQ page</PageLink>. If that doesn't answer your question, reach out at landexperts@shaw.ca.</p>
+            <p>Check out our
+                <PageLink to='/FAQs' end>FAQ page</PageLink>
+                . If that doesn't answer your question, reach out at
+                <EmailLink href="mailto:landexperts@shaw.ca?subject=Alberta Mortgage Solutions Questions"> landexperts@shaw.ca</EmailLink>
+                .
+            </p>
         </ApplyInfoWrapper>
     )
 }
