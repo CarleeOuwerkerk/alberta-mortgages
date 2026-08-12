@@ -197,7 +197,7 @@ const ApplicationForm = () => {
                 <FormItem>
                     <InputLabel>
                         <LabelText>
-                            REQUESTED LOAN AMOUNT
+                            REQUESTED AMOUNT
                         </LabelText>
 
                         <CleaveInput
@@ -206,7 +206,7 @@ const ApplicationForm = () => {
                             pattern="^\$\d{1,3}(,\d{3})*(\.\d{0,2})?$|^\$\d+(\.\d{0,2})?$"
                             value={inputs.requestedLoanAmount || ''}
                             onChange={handleChange}
-                            title='Enter your requested loan amount.'
+                            title='Enter your requested amount.'
                             options={{
                                 numeral: true,
                                 numeralThousandsGroupStyle: 'thousand',

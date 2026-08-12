@@ -69,7 +69,7 @@ const Banner = () => {
             <BannerContent>
                 <Slogan>Your Trusted Path to Homeownership</Slogan>
                 <BulletedList>
-                    <li>Loans from $30,000 to $1,000,000</li>
+                    <li>Mortgages from $40,000 to $1,000,000</li>
                     <li>Up to 70% loan-to-value</li>
                     <li>Financing options from 2 months to 1 year</li>
                 </BulletedList>
